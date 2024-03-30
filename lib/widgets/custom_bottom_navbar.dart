@@ -1,5 +1,5 @@
-import 'package:complex_ui_review/layout/cubit/layout_cubit.dart';
-import 'package:complex_ui_review/layout/cubit/layout_states.dart';
+import 'package:complex_ui_review/screens/layout/cubit/layout_cubit.dart';
+import 'package:complex_ui_review/screens/layout/cubit/layout_states.dart';
 import 'package:complex_ui_review/widgets/app_colors.dart';
 import 'package:complex_ui_review/widgets/custom_text.dart';
 import 'package:complex_ui_review/widgets/svgicon.dart';

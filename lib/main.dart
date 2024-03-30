@@ -1,5 +1,5 @@
-import 'package:complex_ui_review/layout/cubit/layout_cubit.dart';
-import 'package:complex_ui_review/layout/layout_screen.dart';
+import 'package:complex_ui_review/screens/layout/cubit/layout_cubit.dart';
+import 'package:complex_ui_review/screens/strean_controller_example.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.white,
         ),
         debugShowCheckedModeBanner: false,
-        home: const HomeLayout(),
+        home: const StreamControllerExampleScreen(),
       ),
     );
   }

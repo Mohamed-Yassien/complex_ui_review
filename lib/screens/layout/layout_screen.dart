@@ -1,4 +1,4 @@
-import 'package:complex_ui_review/layout/cubit/layout_cubit.dart';
+import 'package:complex_ui_review/screens/layout/cubit/layout_cubit.dart';
 import 'package:complex_ui_review/widgets/custom_bottom_navbar.dart';
 import 'package:flutter/material.dart';
 
