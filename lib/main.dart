@@ -1,6 +1,8 @@
-import 'package:complex_ui_review/select_country_screen.dart';
+import 'package:complex_ui_review/layout/cubit/layout_cubit.dart';
+import 'package:complex_ui_review/layout/layout_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -8,8 +10,8 @@ void main() {
       statusBarIconBrightness: Brightness.dark,
       statusBarColor: Colors.transparent,
       statusBarBrightness: Brightness.dark,
-      systemNavigationBarColor: Colors.transparent,
-      systemNavigationBarIconBrightness: Brightness.dark,
+      // systemNavigationBarColor: Colors.transparent,
+      // systemNavigationBarIconBrightness: Brightness.dark,
     ),
   );
   runApp(const MyApp());
@@ -20,9 +22,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SelectCountyScreen(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (_) => HomeLayoutCubit(),
+        ),
+      ],
+      child: MaterialApp(
+        theme: ThemeData(
+          scaffoldBackgroundColor: Colors.white,
+        ),
+        debugShowCheckedModeBanner: false,
+        home: const HomeLayout(),
+      ),
     );
   }
 }
